@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurel - Buku & Novel Favorit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', 'Segoe UI', sans-serif; }
+        body { background: #fff5f7; color: #333; background-image: radial-gradient(#ffc2d4 1px, transparent 1px); background-size: 20px 20px; }
+        header { background: linear-gradient(135deg, #ff8fab, #ff5d8f, #ffb3c6); color: white; text-align: center; padding: 50px 20px 55px; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; box-shadow: 0 10px 25px rgba(255,93,143,0.3); position: relative; overflow: hidden; }
+        header::after { content: "📚 💗 📖 ✨"; position: absolute; bottom: 8px; left: 0; right: 0; font-size: 22px; letter-spacing: 10px; opacity: 0.9; }
+        header h1 { font-size: 36px; font-weight: 800; text-shadow: 2px 2px 0 rgba(0,0,0,0.1); }
+        header p { margin-top: 8px; font-size: 15px; opacity: 0.95; }
+        header .badge { display: inline-block; background: white; color: #ff5d8f; padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 13px; margin-top: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        nav { background: white; text-align: center; padding: 14px; position: sticky; top: 10px; z-index: 99; max-width: 900px; margin: -20px auto 0; border-radius: 50px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); width: calc(100% - 40px); }
+        nav a { color: #ff5d8f; text-decoration: none; margin: 0 12px; font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 20px; transition: 0.3s; }
+        nav a:hover { background: #ff5d8f; color: white; }
+        .container { max-width: 900px; margin: 25px auto; padding: 0 20px; }
+        .card { background: white; border-radius: 22px; padding: 25px; margin-bottom: 22px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); border: 1px solid #ffd6e0; }
+        .card h2 { color: #ff5d8f; margin-bottom: 12px; font-size: 24px; font-weight: 800; }
+        .card h2::after { content: ""; display: block; width: 60px; height: 4px; background: #ff8fab; border-radius: 10px; margin-top: 6px; }
+        .buku { display: flex; gap: 18px; background: linear-gradient(135deg, #fff0f3, #fff5f7); border: 1.5px solid #ffd6e0; border-radius: 18px; padding: 16px; margin-bottom: 16px; transition: 0.3s; align-items: flex-start; }
+        .buku:hover { transform: translateY(-4px) scale(1.01); box-shadow: 0 12px 25px rgba(255,93,143,0.18); border-color: #ff8fab; }
+        .buku img { width: 110px; height: 155px; object-fit: cover; border-radius: 14px; border: 3px solid white; box-shadow: 0 5px 12px rgba(0,0,0,0.12); flex-shrink: 0; background: #ffc2d4; }
+        .buku h3 { color: #333; font-size: 19px; }
+        .buku p { font-size: 14px; margin-top: 6px; line-height: 1.6; color: #555; }
+        .penulis { font-size: 12px; color: white !important; background: #ff5d8f; display: inline-block; padding: 4px 10px; border-radius: 20px; font-weight: 700; margin-top: 6px !important; }
+        footer { background: linear-gradient(135deg, #ff8fab, #ff5d8f); color: white; text-align: center; padding: 25px 20px; margin-top: 30px; border-top-left-radius: 30px; border-top-right-radius: 30px; font-weight: 600; }
+        .btn { display: inline-block; background: linear-gradient(135deg, #ff8fab, #ff5d8f); color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; margin-top: 12px; font-weight: 700; box-shadow: 0 6px 15px rgba(255,93,143,0.35); transition: 0.3s; }
+        .btn:hover { transform: scale(1.05); }
+        @media (max-width: 600px) {
+          header h1 { font-size: 27px; }
+          .buku { flex-direction: column; text-align: center; align-items: center; }
+          .buku img { width: 100%; height: 180px; }
+          nav a { margin: 0 4px; font-size: 12px; padding: 6px 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📚 Aurel - Buku & Novel Favorit</h1>
+        <p>Web Pribadi | Latihan 16 | XI RPL</p>
+        <p>Halo! Selamat datang di dunia buku favoritku!</p>
+        <div class="badge">✨ 5 Buku Paling Berkesan Buat Aku ✨</div>
+    </header>
+
+    <nav>
+        <a href="#home">🏠 Home</a>
+        <a href="#tentang">👋 Tentang Aku</a>
+        <a href="#buku">📖 Daftar Buku</a>
+        <a href="#kontak">📩 Kontak</a>
+    </nav>
+
+    <div class="container" id="home">
+        <div class="card" id="tentang">
+            <h2>👋 Tentang Aku</h2>
+            <p>Halo, nama aku <b>Aurel</b>. Aku anak kelas XI RPL yang suka banget baca novel.</p>
+            <p style="margin-top:10px;">Buat aku, baca buku itu kayak jalan-jalan tanpa harus pergi ke mana-mana. Kita bisa ketemu banyak karakter, tempat baru, dan cerita yang bikin baper, ketawa, sampai nangis.</p>
+            <p style="margin-top:10px;">Di web ini, aku mau bagiin 5 buku yang paling aku suka dan paling berkesan buat aku!</p>
+        </div>
+
+        <div class="card" id="buku">
+            <h2>📖 Daftar Buku Favoritku</h2>
+
+            <div class="buku">
+                <img src="seporsi mie ayam sebelum mati - Copy.jpeg" alt="Seporsi Mie Ayam Sebelum Mati">
+                <div>
+                    <h3>1. Seporsi Mie Ayam Sebelum Mati</h3>
+                    <p class="penulis">Penulis: Brian Khrisna</p>
+                    <p>Cerita yang ringan tapi dalem banget tentang orang yang lagi di titik terendah hidupnya. Relate banget, dan endingnya bikin lega.</p>
+                </div>
+            </div>
+
+            <div class="buku">
+                <img src="namaku alam.jpeg" alt="Namaku Alam">
+                <div>
+                    <h3>2. Namaku Alam</h3>
+                    <p class="penulis">Penulis: Leila S. Chudori</p>
+                    <p>Lanjutan dari Laut Bercerita, dari sudut pandang Alam, anaknya Biru Laut. Cerita tentang kehilangan, keluarga, dan cara berdamai dengan masa lalu.</p>
+                </div>
+            </div>
+
+            <div class="buku">
+                <img src="cinta itu luka.jpeg" alt="Cantik Itu Luka">
+                <div>
+                    <h3>3. Cantik Itu Luka</h3>
+                    <p class="penulis">Penulis: Eka Kurniawan</p>
+                    <p>Cerita Dewi Ayu dan anak-anaknya yang hidupnya penuh luka, cinta, dan tragedi. Ceritanya magis, sedih, tapi nagih banget.</p>
+                </div>
+            </div>
+
+            <div class="buku">
+                <img src="madilog.jpeg" alt="Madilog">
+                <div>
+                    <h3>4. Madilog</h3>
+                    <p class="penulis">Penulis: Tan Malaka</p>
+                    <p>Buku filsafat yang ngajarin cara berpikir logis dan kritis. Berat tapi bikin otak kebuka banget, wajib baca kalau mau paham cara berpikir yang bener.</p>
+                </div>
+            </div>
+
+            <div class="buku">
+                <img src="laut bercerita.jpeg" alt="Laut Bercerita">
+                <div>
+                    <h3>5. Laut Bercerita</h3>
+                    <p class="penulis">Penulis: Leila S. Chudori</p>
+                    <p>Cerita tentang Biru Laut dan kawan-kawan aktivis yang hilang di masa Orde Baru. Bikin haru dan bikin kita makin sayang sama sejarah.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card" id="kontak" style="text-align:center;">
+            <h2 style="text-align:left;">📩 Hubungi Aku</h2>
+            <p>Kalau kamu punya rekomendasi buku yang bagus, kasih tau aku ya!</p>
+            <a class="btn" href="#">📸 Instagram Aku</a>
+            <p style="margin-top:12px; font-size:13px;">Email: aurel@email.com | Pekanbaru, Riau</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Dibuat oleh Aurel - XI RPL | Latihan 16 Web Pribadi</p>
+        <p style="font-size:12px; margin-top:5px; opacity:0.85;">Dibuat dengan ❤️ di Pekanbaru</p>
+    </footer>
+
+</body>
+</html>
